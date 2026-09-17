@@ -151,7 +151,7 @@ OLLAMA_BASE_URL=http://localhost:11434
 OLLAMA_MODEL=llama2
 
 # SVN Configuration
-SVN_REPO_PATH=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+SVN_REPO_PATH=\\\\example-server\\trunk\\cobol\\src
 SVN_USERNAME=your_username
 SVN_PASSWORD=your_password
 
@@ -164,7 +164,7 @@ JIRA_API_TOKEN=your_jira_token
 MONDAY_API_TOKEN=your_monday_token
 
 # Source Directories
-COBOL_SOURCE_DIR=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+COBOL_SOURCE_DIR=\\\\example-server\\trunk\\cobol\\src
 ADDITIONAL_SOURCE_DIRS=/path/to/other,/path/to/more
 
 # File Extensions to Watch
