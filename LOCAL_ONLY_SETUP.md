@@ -79,12 +79,12 @@ USE_AI=false
 EMBEDDING_PROVIDER=none
 
 # SVN Configuration (still needed for history)
-SVN_REPO_PATH=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+SVN_REPO_PATH=\\\\example-server\\trunk\\cobol\\src
 SVN_USERNAME=your_username
 SVN_PASSWORD=your_password
 
 # Source Directories
-COBOL_SOURCE_DIR=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+COBOL_SOURCE_DIR=\\\\example-server\\trunk\\cobol\\src
 ```
 
 **That's it!** No API keys, no Claude, no Ollama, no cloud services.
