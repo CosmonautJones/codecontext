@@ -85,12 +85,12 @@ OLLAMA_BASE_URL=http://localhost:11434
 OLLAMA_MODEL=llama2
 
 # REQUIRED: SVN Configuration
-SVN_REPO_PATH=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+SVN_REPO_PATH=\\\\example-server\\trunk\\cobol\\src
 SVN_USERNAME=your_username
 SVN_PASSWORD=your_password
 
 # REQUIRED: Source Directory
-COBOL_SOURCE_DIR=\\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+COBOL_SOURCE_DIR=\\\\example-server\\trunk\\cobol\\src
 
 # OPTIONAL: Jira (leave blank if not using)
 JIRA_BASE_URL=
@@ -108,30 +108,30 @@ HOST=localhost
 ### Step 3: Configure SVN Access
 
 #### For Network Paths (Windows)
-If using UNC paths like `\\LocalCobolSearch\...`:
+If using UNC paths like `\\example-server\...`:
 
 1. Map network drive (optional but recommended):
 ```cmd
-net use Z: \\LocalCobolSearch\trunk /persistent:yes
+net use Z: \\example-server\trunk /persistent:yes
 ```
 
 2. Update `.env`:
 ```env
-SVN_REPO_PATH=Z:\cobol\fujsource
-COBOL_SOURCE_DIR=Z:\cobol\fujsource
+SVN_REPO_PATH=Z:\cobol\src
+COBOL_SOURCE_DIR=Z:\cobol\src
 ```
 
 #### For SVN URLs
 If using `svn://` or `https://` URLs:
 
 ```env
-SVN_REPO_PATH=svn://your-server/trunk/cobol/fujsource
+SVN_REPO_PATH=svn://your-server/trunk/cobol/src
 ```
 
 ### Step 4: Test SVN Connection
 
 ```bash
-svn info "\\\\LocalCobolSearch\\trunk\\cobol\\fujsource"
+svn info "\\\\example-server\\trunk\\cobol\\src"
 ```
 
 Should show repository information. If you get an error:
@@ -160,7 +160,7 @@ Then in another terminal:
 ```bash
 curl -X POST http://localhost:3000/api/index \
   -H "Content-Type: application/json" \
-  -d '{"directories": ["\\\\LocalCobolSearch\\\\trunk\\\\cobol\\\\fujsource"]}'
+  -d '{"directories": ["\\\\example-server\\\\trunk\\\\cobol\\\\src"]}'
 ```
 
 This runs in the background and may take a while for large codebases.
@@ -348,7 +348,7 @@ ollama serve
 
 Try interactive login first:
 ```bash
-svn list --username your_user \\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+svn list --username your_user \\\\example-server\\trunk\\cobol\\src
 ```
 
 Enter password when prompted. This caches credentials.
@@ -364,7 +364,7 @@ PORT=3001
 
 Check permissions:
 ```bash
-ls -la \\\\LocalCobolSearch\\trunk\\cobol\\fujsource
+ls -la \\\\example-server\\trunk\\cobol\\src
 ```
 
 Ensure read access to the directories.
